@@ -1,0 +1,48 @@
+{
+  "name": "epm-mentoring-program-2020-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -b",
+    "start": "./node_modules/.bin/nodemon src/index.ts",
+    "lint": "npm run prettier:exec && npm run lint:exec",
+    "prettier:fix": "./node_modules/.bin/prettier --write src",
+    "prettier:exec": "./node_modules/.bin/prettier --check src",
+    "lint:fix": "./node_modules/.bin/eslint --fix src --ext .ts ",
+    "lint:exec": "./node_modules/.bin/eslint src --ext .ts",
+    "test": "./node_modules/.bin/jest --passWithNoTests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lodka/epm-mentoring-program-2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lodka/epm-mentoring-program-2020/issues"
+  },
+  "homepage": "https://github.com/lodka/epm-mentoring-program-2020#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.12.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-jest": "^24.1.0",
+    "husky": "^4.3.0",
+    "jest": "^26.6.1",
+    "nodemon": "^2.0.6",
+    "prettier": "2.1.2",
+    "ts-jest": "^26.4.2",
+    "typescript": "^4.0.3",
+    "@typescript-eslint/parser": "^4.5.0"
+
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
+  }
+}

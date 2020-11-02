@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "moduleResolution": "node",
+        "module": "commonjs",
+        "declaration": true,
+        "inlineSourceMap": true,
+        "esModuleInterop": true ,
+        "strict": true ,
+        "noUnusedLocals": true ,
+        "noUnusedParameters": false ,
+        "noImplicitReturns": true ,
+        "noFallthroughCasesInSwitch": true ,
+        "forceConsistentCasingInFileNames": true,
+        "preserveConstEnums": true,
+        "stripInternal": true,
+        "removeComments": true,
+        "traceResolution": false ,
+        "listEmittedFiles": false ,
+        "listFiles": false ,
+        "pretty": true ,
+        "experimentalDecorators": true ,
+        "preserveSymlinks": true,
+        "lib": [
+            "esnext",
+            "esnext.asynciterable",
+            "dom"
+        ],
+        "types": [
+            "node"
+        ]
+    },
+    "exclude": [
+        "node_modules/**"
+    ],
+    "compileOnSave": false
+}

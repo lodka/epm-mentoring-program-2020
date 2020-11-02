@@ -1,0 +1,58 @@
+{
+  "name": "epm-mentoring-program-2020-fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:prod",
+    "start": "npm run start:dev",
+    "build:prod": "./node_modules/.bin/webpack --config webpack.prod.js",
+    "start:dev": "./node_modules/.bin/webpack-dev-server --open --config webpack.dev.js",
+    "lint": "npm run prettier:exec && npm run lint:exec",
+    "fix": "npm run prettier:fix && npm run lint:fix",
+    "prettier:fix": "./node_modules/.bin/prettier --write src",
+    "prettier:exec": "./node_modules/.bin/prettier --check src",
+    "lint:fix": "./node_modules/.bin/eslint --fix src --ext .ts ",
+    "lint:exec": "./node_modules/.bin/eslint src --ext .ts",
+    "test": "./node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lodka/epm-mentoring-program-2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lodka/epm-mentoring-program-2020/issues"
+  },
+  "homepage": "https://github.com/lodka/epm-mentoring-program-2020#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.15",
+    "@typescript-eslint/parser": "^4.5.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.0",
+    "eslint": "^7.12.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-jest": "^24.1.0",
+    "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
+    "jest": "^26.6.1",
+    "prettier": "2.1.2",
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
+    "style-loader": "^2.0.0",
+    "ts-jest": "^26.4.2",
+    "ts-loader": "^8.0.7",
+    "typescript": "^4.0.3",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^5.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run test"
+    }
+  }
+}

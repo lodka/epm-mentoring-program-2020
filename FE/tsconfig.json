@@ -2,7 +2,11 @@
   "extends": "../tsconfig.base",
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": "src"
+    "rootDir": "src",
+    "module": "ES6",
+    "target": "ES5",
+    "pretty": true,
+    "jsx": "react"
   },
   "include": ["src/**/*"],
   "exclude": ["**/__tests__/**/*"]
